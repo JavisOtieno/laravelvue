@@ -19,4 +19,12 @@ class ClotheController extends Controller
         return response()->json($clothes);
         //return view('clothes.index',['clothes'=>$clothes]);
     }
+
+    public function postApi(Request $request){
+        Clothe::create([
+            'name'=> $request->name,
+            'price'=> $request->price,
+            'description'=> $request->description,
+        ]);
+    }
 }

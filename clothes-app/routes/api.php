@@ -15,7 +15,8 @@ use App\Http\Controllers\ClotheController;
 |
 */
 
-Route::get('/clothes', [ClotheController::class,'indexApi']);
+Route::get('/cloths', [ClotheController::class,'indexApi']);
+Route::post('/cloths', [ClotheController::class,'postApi']);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
